@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>InterviewLog | Ofek Vaknin</title>
+    <link rel="stylesheet" href="projects.css" />
+  </head>
+
+  <body id="top">
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <a class="brand" href="index.html"> ← Back to Portfolio</a>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero" style="background-image: url('images/Dashboard.jpg')">
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+        <h1 class="fade-down">Cost Manager System</h1>
+        <p class="subtitle fade-in">
+          A modern web application for tracking and visualizing personal
+          expenses.
+        </p>
+
+        <div class="meta fade-in">
+          <span class="pill">React</span>
+          <span class="pill">Material UI</span>
+          <span class="pill">IndexedDB API</span>
+          <span class="pill">Recharts</span>
+          <span class="pill">JavaScript</span>
+          <span class="pill">LocalStorage</span>
+        </div>
+
+        <div class="cta fade-in">
+          <a
+            class="btn primary"
+            href="https://github.com/ofek-vaknin/Cost-Manager"
+            target="_blank"
+          >
+            View on GitHub
+          </a>
+          <a class="btn ghost" href="index.html#projects"> Back to Projects </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Content -->
+    <main class="section">
+      <div class="container">
+        <section class="card fade-in">
+          <h2 class="card-title">Overview</h2>
+
+          <p class="text"></p>
+
+          <p class="text">
+            A modern web application for tracking and visualizing personal
+            expenses.
+          </p>
+
+          <p class="text">
+            It allows users to record their costs, generate monthly reports, and
+            view insightful charts — all stored locally in the browser using
+            IndexedDB.
+          </p>
+        </section>
+
+        <section class="grid">
+          <div class="card fade-in">
+            <h2 class="card-title">Technologies</h2>
+            <div class="chips">
+              <span class="chip">React</span>
+              <span class="chip">IndexedDB</span>
+              <span class="chip">LocalStorage</span>
+              <span class="chip">JavaScript</span>
+            </div>
+          </div>
+
+          <div class="card fade-in">
+            <h2 class="card-title">Key Features</h2>
+            <ul class="feature-list">
+              <li>
+                Add new expenses with sum, category, currency, and description
+              </li>
+              <li>
+                Store all data locally in IndexedDB (persistent between
+                sessions)
+              </li>
+              <li>
+                Generate detailed reports filtered by year, month, and currency
+              </li>
+              <li>
+                Automatic currency conversion using real-time exchange rates
+              </li>
+              <li>Display Pie and Bar charts for spending visualization/li></li>
+              <li>Save the last generated report using localStorage</li>
+              <li>
+                Real-time UI updates through a listener (subscribeToChanges)
+                system
+              </li>
+              <li>Responsive UI with Material UI components</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <a href="#top" class="scroll-to-top">↑</a>
+    <script src="projects.js"></script>
+  </body>
+</html>

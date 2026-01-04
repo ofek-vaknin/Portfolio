@@ -1,0 +1,235 @@
+/* Base */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  background: #05070b;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+.container {
+  width: min(1000px, 92%);
+  margin: 0 auto;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  background: rgba(0,0,0,0.55);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.nav-container {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+  gap: 12px;
+}
+
+.brand {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 900;
+  opacity: 0.92;
+}
+
+.brand:hover { opacity: 1; text-decoration: underline; }
+
+.nav-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  padding: 10px 14px;
+  text-decoration: none;
+  font-weight: 800;
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+  opacity: 0.95;
+  transition: transform 0.18s ease, opacity 0.18s ease, border-color 0.18s ease;
+}
+
+.btn:hover { opacity: 1; transform: translateY(-1px); }
+
+.btn.primary {
+  background: rgba(0,170,255,0.18);
+  border-color: rgba(0,170,255,0.35);
+}
+
+.btn.ghost { background: rgba(255,255,255,0.06); }
+
+/* Hero */
+.hero {
+  margin-top: 56px;
+  height: 55vh;
+  min-height: 380px;
+  position: relative;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  background-image: url("images/Checkers Game.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.62);
+}
+
+.hero-content {
+  position: relative;
+  padding: 18px;
+  width: min(900px, 92%);
+}
+
+.hero-content h1 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 950;
+}
+
+.subtitle {
+  margin-top: 12px;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  opacity: 0.95;
+  line-height: 1.7;
+}
+
+.meta {
+  margin-top: 18px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.pill {
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.10);
+  font-size: 0.9rem;
+  opacity: 0.95;
+}
+
+.cta {
+  margin-top: 18px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Sections */
+.section { padding: 70px 0; }
+
+/* Cards */
+.card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 18px;
+  padding: 18px;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: 900;
+  margin-bottom: 12px;
+}
+
+.text {
+  opacity: 0.92;
+  line-height: 1.9;
+  margin-bottom: 12px;
+}
+
+.grid {
+  margin-top: 18px;
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+@media (min-width: 820px) {
+  .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.chip {
+  padding: 9px 12px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.10);
+  font-size: 0.95rem;
+  opacity: 0.95;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Scroll to top */
+.scroll-to-top {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  text-decoration: none;
+  color: #fff;
+  background: rgba(255,255,255,0.10);
+  border: 1px solid rgba(255,255,255,0.14);
+  z-index: 999;
+}
+
+/* Animations (Observer adds .appear) */
+.fade-in, .fade-in-big, .fade-down {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+.fade-down { transform: translateY(-18px); }
+
+.appear {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.feature-list{
+  margin-top: 12px;
+  padding-left: 18px;
+  line-height: 1.9;
+  color: rgba(255,255,255,0.85);
+}
+
+.feature-list li{
+  margin-bottom: 6px;
+}
